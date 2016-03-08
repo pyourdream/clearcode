@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+	get to know the use of DOM
+	<p>
+		<div>1個目のdivタグです</div>
+		<div>2個目のdivタグです</div>
+		<div>3個目のdivタグです</div>
+
+		<script>
+			alert(document.getElementsByTagName("div")[1].firstChild.nodeValue);
+
+		</script><br>
+	</p>
+	
+	<p>
+		<div>4個目のdivタグです</div>
+		<div>5個目のdivタグです</div>
+		<div>6個目のdivタグです</div>
+
+		<script>
+			document.getElementsByTagName("div")[1].firstChild.nodeValue = "ここが書き換わりました";
+
+		</script><br>
+	</p>
+
+	<p>
+
+		<div>7個目のdivタグです</div>
+		<div>8個目のdivタグです</div>
+		<div>9個目のdivタグです</div>
+
+		<script>
+			var dt = document.getElementsByTagName("div");
+			　　　for(var i = 6; i < dt.length; i ++){
+				dt[i].firstChild.nodeValue = "ここが書き換わりました";
+			}
+
+		</script>
+	</p>
+
+</body>
+
+</html>

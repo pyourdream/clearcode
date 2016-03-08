@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+	get the average using object
+
+	<script type="text/javascript">
+		function Seito(_namae, _seiseki) {
+			this.namae = _namae;
+			this.seiseki = _seiseki;
+		}
+
+		var kumi = [];
+		kumi[0] = new Seito("山田太郎", 95);
+		kumi[1] = new Seito("田中一郎", 73);
+		kumi[2] = new Seito("鈴木花子", 86);
+		var total = 0;
+
+		for(i = 0; i < kumi.length; i ++){
+			document.write(kumi[i].namae + "：" + kumi[i].seiseki + "点<br>");
+			total += kumi[i].seiseki;
+		}
+
+		var heikin = total / kumi.length;
+		document.write("成績の平均 = " + heikin);
+
+	</script>
+
+</body>
+
+</html>

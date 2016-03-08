@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<!-- check the chinese zodiac of the year-->
+	type the year you want to know chinese zodiac of
+
+	<form name="zodiac">
+		<input type="text" name="check" value=""></input>
+		<input type="button" value="確認" onclick="aa()"></input>
+	</form>
+
+	<script type="text/javascript">
+		function aa(){
+			var i = parseInt(document.zodiac.check.value);
+			var animal = ['monkey', 'chicken', 'dog', 'boar', 'mouse', 'cow', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'sheep'];
+			document.write(animal[i % 12]);
+		}
+	</script>
+
+</body>
+
+</html>

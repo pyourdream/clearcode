@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<!-- check your constellation-->
+
+	give me your birthday, if your birthday is January 2nd,
+	type '0102'. then you will get your constellation
+
+	<form name="conste">
+		<input type="text" name="enter" value=""></input>
+		<input type="button" value="check" onclick="check()"></input>
+	</form>
+
+	<script type="text/javascript">
+		function check() {
+			var inter = parseInt(document.conste.enter.value);
+			if (321 <= inter && inter <= 420) {
+				document.write("Aries");
+			} else if (421 <= inter && inter <= 520) {
+				document.write("Taurus");
+			} else if (521 <= inter && inter <= 621) {
+				document.write("Gemini");
+			} else if (622 <= inter && inter <= 723) {
+				document.write("Cancer");
+			} else if (724 <= inter && inter <= 823) {
+				document.write("Leo");
+			} else if (824 <= inter && inter <= 923) {
+				document.write("Virgo");
+			} else if (924 <= inter && inter <= 1023) {
+				document.write("Libra");
+			} else if (1024 <= inter && inter <= 1122) {
+				document.write("Scorpio");
+			} else if (1123 <= inter && inter <= 1222) {
+				document.write("Sagitarius");
+			} else if (1223 <= inter || inter <= 120) {
+				document.write("Capricorn");
+			} else if (121 <= inter && inter <= 219) {
+				document.write("Aquarius");
+			} else if (220 <= inter && inter <= 320) {
+				document.write("Pisces");
+			} 
+		}
+
+	</script>
+
+</body>
+
+</html>

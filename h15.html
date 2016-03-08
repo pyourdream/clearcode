@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- guess the number i have-->
+	I have a random number,<br>
+	guess and put the number from 1 to 10 into the text field,
+
+	<script type="text/javascript">
+		var randomnum = (Math.floor(Math.random () * 10) + 1);
+
+		function check(){
+			var guessnum = parseInt(document.number.guess.value);
+			if (randomnum > guessnum) {
+				document.write("too small");
+			} else if (randomnum < guessnum) {
+				document.write("too big");
+			} else {
+				document.write("you are right");
+			}
+
+		}
+
+	</script>
+
+	<form name="number">
+		<input type="text" name="guess" value=""></input>
+		<input type="button" value="guess" onclick="check()"></input>
+
+	</form>
+
+</body>
+
+</html>

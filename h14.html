@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<!-- put 3 scores, I'm gonna give you the average -->
+
+	<form name="scores">
+		<input type="text" name="score1" value=""></input>
+		<input type="text" name="score2" value=""></input>
+		<input type="text" name="score3" value=""></input>
+		<input type="button" value="average" onclick="average()"></input>
+	</form>
+
+	<script type="text/javascript">
+		function average(){
+			var point1 = parseInt(document.scores.score1.value);
+			var point2 = parseInt(document.scores.score2.value);
+			var point3 = parseInt(document.scores.score3.value);
+			var ave = (point1+point2+point3)/3;
+
+			alert(ave);
+
+		}
+
+	</script>
+
+</body>
+
+</html>
