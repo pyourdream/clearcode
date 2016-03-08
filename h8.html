@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+</head>
+<body>
+	get the average of the score
+	<p>
+		<script type="text/javascript">
+			var seiseki = [95, 73, 86, 47, 90];
+			var total = 0;
+
+			for (var i = 0; i < seiseki.length; i ++) {
+				total += seiseki[i];
+			}
+
+			var heikin = total / seiseki.length;
+			document.write("成績の平均 = " + heikin);
+
+		</script>
+	</p>
+
+	get to know how to use object
+	<p>
+		<script type="text/javascript">
+			var seito = new Object();
+			seito.namae = "山田太郎";
+			seito.seiseki = 95;
+			document.write(seito.namae + "：" + seito.seiseki + "点");
+
+		</script>
+	</p>
+
+	use prural elements with object
+	<p>
+		<script type="text/javascript">
+			function Seito(_namae, _seiseki) {
+				this.namae = _namae;
+				this.seiseki = _seiseki;
+			}
+
+			var kumi = [];
+			kumi[0] = new Seito("山田太郎", 95);
+			kumi[1] = new Seito("田中一郎", 73);
+			kumi[2] = new Seito("鈴木花子", 86);
+
+			for (i = 0; i < kumi.length; i ++){
+				document.write(kumi[i].namae + "：" + kumi[i].seiseki + "点<br>");
+			}
+		</script>
+	</p>
+
+</body>
+
+</html>
