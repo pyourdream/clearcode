@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title></title>
+</head>
+<body>
+<!-- practice -->
+<form name="check">
+	<input type="text" name="number" value=""></input>
+	<input type="button" value="check" onclick="check()"></input>
+</form>
+
+<script>
+	function check(){
+		var i=document.check.number.value;
+		if (i > 10){
+			alert(i);
+		}
+		alert("bigger than 10");
+	}
+</script>
+
+</body>
+</html>

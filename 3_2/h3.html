@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    function handan(shadanki){
+     if(shadanki > 6){
+       document.getElementById("kekka").innerHTML = "止まる";
+     } else if(shadanki >= 4) {
+       document.getElementById("kekka").innerHTML = "ダッシュ";
+     } else {
+       document.getElementById("kekka").innerHTML = "進む";
+     }
+   }
+ </script>
+ <input type="text" id="num">
+ <input type="button" value="判断" onclick="handan(num.value)">
+ <div id="kekka">ここに結果を表示します</div>
+
+
+ 
+</body>
+</html>
