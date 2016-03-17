@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form name="info">
+		<input name="number1" type="text" value=""></input><br>
+		<input name="number2" type="text" value=""></input><br>
+		<input name="number3" type="text" value=""></input><br>
+		<input name="number4" type="text" value=""></input><br>
+		<input name="number5" type="text" value=""></input><br>
+		<input name="number6" type="text" value=""></input><br>
+		<input name="number7" type="text" value=""></input><br>
+		<input name="number8" type="text" value=""></input><br>
+		<input name="number9" type="text" value=""></input><br>
+		<input name="number10" type="text" value=""></input><br>
+		<input type="button" value="check" onclick="sort ()"></input>
+	</form>
+
+	<script type="text/javascript">
+		function sort() {
+			for (var count = 0; count < 9; count ++ ) {
+				var data[count] = parseInt(document.info.number[count]).value;
+				
+			}
+			document.write(data[4]);
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	put a number, then check if it is prime or not
+
+	<form name="prime">
+		<input type="text" name="given" value=""></input>
+		<input type="button" value="check" onclick="cal()"></input>
+	</form>
+
+	<script type="text/javascript">
+		function cal() {
+			var i = parseInt(document.prime.given.value);
+			var j = 2;
+			var k = 0;
+
+			while(j * j <= i){
+				if (i % j == 0) {
+					k = 1;
+					break;
+				}
+				j = j + 1;
+			}
+			if (k == 1 || i ==1) {
+				document.write("not prime number");
+			} else {
+				document.write("prime number");
+			}
+			document.write(k);
+		}
+
+	</script>
+
+
+
+
+</body>
+</html>

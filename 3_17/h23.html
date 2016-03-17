@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title></title>
+</head>
+<body>
+	quick sort<br>
+
+	<script type="text/javascript">
+
+		data = new Array(23,34,78,14,98,45,93,58,88,63,19);
+
+		function showData() {
+			for (var sd = 0; sd < data.length; sd ++) {
+				document.write(data[sd] + ", ");
+			}
+			document.write("<br>");
+		}
+
+		function arrangeData(first,last) {
+			var axis = data[Math.floor((first + last) / 2)];
+			var fi = first;
+			var la = last;
+
+			while (true) {
+				while (data[fi] < axis) {
+					fi ++ ;
+				}
+				while (axis < data[la]) {
+					la -- ;
+				}
+				if (fi >= la) {
+					break;
+				}
+
+				swap = data[fi];
+				data[fi] = data[la];
+				data[la] = swap;
+
+				fi ++ ;
+				la -- ;
+			}
+
+			if (first < fi - 1) {
+				arrangeData(first, fi - 1);
+			}
+			if (la + 1 < last) {
+				arrangeData(la + 1, last);
+			}
+
+		}
+	</script>
+
+	<script type="text/javascript">
+		showData();	
+		arrangeData(0, data.length - 1);
+		showData();
+	</script>
+
+</body>
+
+</html>

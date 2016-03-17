@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+data = new Array(30,10,5,99,44,65,10,31,1,57,88,78);
+function sortData(start,end)
+{
+	var x = data[Math.floor((start + end) / 2)];
+	var i = start;
+	var j = end;
+	while (true)
+	{
+		while (data[i] < x) i++;
+		while (x < data[j]) j--;
+		if (i >= j) break;
+		n = data[i];
+		data[i] = data[j];
+		data[j] = n;
+		i++;
+		j--; 
+	}
+	if (start < i-1) sortData(start,i-1);
+	if (j+1 < end)   sortData(j+1,end);
+}
+function printArray()
+{
+	for (i=0; i<data.length; i++) document.write(data[i],", ");
+	document.write("<br>");
+}
+</script>
+<script type="text/javascript">
+	printArray();
+	sortData(0,data.length-1);
+printArray();
+
+</script>
+  
+</body>
+
+</html>
