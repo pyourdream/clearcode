@@ -16,7 +16,6 @@
 	12,345 yen --> 1 ten thousand bill + 2 thousand bill,<br>
 	+ 3 hundred coins + 4 ten coins + 1 five coins<br><br>
 
-
 	<script type="text/javascript">
 
 		function data() {
@@ -28,9 +27,8 @@
 
 			var over = amount;
 
-			
-
 			for (var i = 0; i < sort.length; i++) {
+				
 				numbers[i] = Math.floor(over / sort[i]);
 				over = over % sort[i];
 

@@ -9,9 +9,11 @@
 	serch employees based on the ages<br><br>
 
 	<form name="info">
+
 		<input type="text" name="max" value="">年齢の上限</input><br>
 		<input type="text" name="min" value="">年齢の下限</input><br>
 		<input type="button" value="search" onclick="data()"></input>
+
 	</form>
 
 	<script type="text/javascript">
@@ -34,6 +36,7 @@
 
 				if (employee_age[i] <= max_age && employee_age[i] >= min_age) {
 					document.write(employee_no[i] + " " + employee_name[i] + " " +employee_age[i] + "歳<br>");
+
 					j[i] = ""; 
 				} 
 				
@@ -41,9 +44,11 @@
 
 			if (j.length == 0) {
 				document.write("none");
+
 			}
 			
 		}
+		
 	</script>
 
 </body>
