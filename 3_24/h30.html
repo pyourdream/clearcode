@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8 ">
+	<title></title>
+</head>
+<body>
+
+	encrypt your string<br>
+	ex, hello -> jgnnq, umpjb -> world<br>
+
+	<form name="info">
+
+		<input type="text" name="origin" value=""></input>
+		<input type="button" value="encrypt" onclick="operation()"></input><br>
+
+		<input type="text" name="origin_2" value=""></input>
+		<input type="button" value="decode" onclick="operation2()"></input>
+
+	</form>
+
+	<script type="text/javascript">
+
+		function operation() {
+
+			var words = document.info.origin.value.split('');
+
+			var alphabet = new Array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+
+			var convert = new Array();
+
+			var encryption = new Array();
+
+			for (var i = 0; i < words.length; i++) {
+				convert[i] = words[i].charCodeAt(0) - 97;
+				if (convert[i] >= 24) {
+					encryption[i] = alphabet[convert[i] - 24];
+				} else {
+					encryption[i] = alphabet[convert[i] + 2];
+				}
+				document.write(encryption[i]);
+			}
+
+		}
+
+
+		function operation2() {
+
+			var words = document.info.origin_2.value.split('');
+
+			var alphabet = new Array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+
+			var convert = new Array();
+
+			var encryption = new Array();
+
+			for (var i = 0; i < words.length; i++) {
+				convert[i] = words[i].charCodeAt(0) - 97;
+				if (convert[i] <= 1) {
+					encryption[i] = alphabet[convert[i] + 24];
+				} else {
+					encryption[i] = alphabet[convert[i] - 2];
+				}
+				document.write(encryption[i]);
+			}
+
+		}
+
+
+
+		
+
+
+	</script>
+
+</body>
+
+</html>

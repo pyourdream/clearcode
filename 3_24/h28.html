@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title></title>
+</head>
+<body>
+
+	put 1001 - 1010<br>
+	get the corresponging employee<br>
+
+
+	<form name="info">
+		<input type="text" name="put_no" value=""></input>
+		<input type="button" value="employee info" onclick="search()"></input>
+	</form>
+
+	<script type="text/javascript">
+
+		function search() {
+			var serched_number = parseInt(document.info.put_no.value);
+
+			var employee_no = new Array(1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010);
+
+			var employee_name = new Array("鈴木","井上","山本","田川","田中","マツダ","木下","加藤","岡本","吉永");
+
+			for (var i = 0; i <= employee_no.length; i++) {
+
+				if (employee_no[i] == serched_number) {
+					document.write(employee_name[i]);
+					break;
+				} else if (i == employee_no.length) {
+					document.write("unregistered");
+				}
+
+			}
+			
+
+			
+
+
+		}
+
+	</script>
+
+
+
+</body>
+
+</html>

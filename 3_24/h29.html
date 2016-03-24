@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8 ">
+	<title></title>
+</head>
+<body>
+
+	serch employees based on the ages<br><br>
+
+	<form name="info">
+		<input type="text" name="max" value="">年齢の上限</input><br>
+		<input type="text" name="min" value="">年齢の下限</input><br>
+		<input type="button" value="search" onclick="data()"></input>
+	</form>
+
+	<script type="text/javascript">
+
+		var employee_no = new Array(1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010);
+
+		var employee_name = new Array("鈴木","井上","山本","田川","田中","マツダ","木下","加藤","岡本","吉永");
+
+		var employee_age = new Array(
+			24, 45, 19, 50, 40, 54, 38, 25, 33, 44);
+
+		var j = new Array();
+
+		function data () {
+
+			var max_age = parseInt(document.info.max.value);
+			var min_age = parseInt(document.info.min.value);
+
+			for (var i = 0; i <= employee_no.length; i++) {
+
+				if (employee_age[i] <= max_age && employee_age[i] >= min_age) {
+					document.write(employee_no[i] + " " + employee_name[i] + " " +employee_age[i] + "歳<br>");
+					j[i] = ""; 
+				} 
+				
+			}
+
+			if (j.length == 0) {
+				document.write("none");
+			}
+			
+		}
+	</script>
+
+</body>
+
+</html>

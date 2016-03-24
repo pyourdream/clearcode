@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form name="info">
+
+		<input type="text" name="get_amount" value=""></input>
+		<input type="button" value="convert" onclick="data()"></input>
+
+	</form><br>
+
+	count the number of each bill and coin based on currency unit<br><br>
+	12,345 yen --> 1 ten thousand bill + 2 thousand bill,<br>
+	+ 3 hundred coins + 4 ten coins + 1 five coins<br><br>
+
+
+	<script type="text/javascript">
+
+		function data() {
+			var amount = parseInt(document.info.get_amount.value);
+
+			var sort = new Array(10000, 5000, 1000, 500, 100, 50, 10, 5, 1);
+
+			var numbers = new Array()
+
+			var over = amount;
+
+			
+
+			for (var i = 0; i < sort.length; i++) {
+				numbers[i] = Math.floor(over / sort[i]);
+				over = over % sort[i];
+
+				document.write(numbers[i] + " " + "unit of " + sort[i] + "<br>");
+			}
+
+			var show = document.getElementById('result');
+
+			show.innerHTML = numbers;
+
+		}
+
+	</script>
+
+	<div id = result></div>
+
+</body>
+
+</html>

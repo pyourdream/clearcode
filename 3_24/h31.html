@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	put a number,<br>
+	get the points at each 3 digits<br><br>
+	ex. 12345678910 -> 12,345,678,910<br><br>
+
+
+	<form name="info">
+
+		<input type="text" name="numbers" value=""></input>
+		<input type="button" value="get points" onclick="operation()"></input><br>
+
+	</form>
+
+	<script type="text/javascript">
+		
+		function operation() {
+
+			var given_no = parseInt(document.info.numbers.value);
+
+			var reverse_no = new Array();
+
+			var fixed_no = new Array();
+
+			var j = String(given_no).length;
+
+			for (var i = 0; i < j; i++) {
+
+				reverse_no[i] = given_no % 10;
+				given_no = given_no / 10;
+				given_no = Math.floor(given_no);
+
+			}
+
+			var s = 0;
+
+			for (var k = 0; k < j + s; k++) {
+
+				if ((k + 1) % 4 == 0) {
+					fixed_no[k] = ",";
+					s++;
+				} else {
+					fixed_no[k] = reverse_no[k - s];
+				}
+
+			}
+
+			for (var l = 0; l < fixed_no.length; l++) {
+				document.write(fixed_no[fixed_no.length - l - 1]);
+			}
+		}
+
+	</script>
+
+</body>
+</html>
